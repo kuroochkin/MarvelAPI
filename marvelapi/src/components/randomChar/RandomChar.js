@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import mjolnir from '../../resources/img/mjolnir.png';
 import MarvelService from '../../services/MarvelService';
-import Spinner from '../spinner/spinner';
+import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import './randomChar.scss';
