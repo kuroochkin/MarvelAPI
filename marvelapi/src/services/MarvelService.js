@@ -1,5 +1,3 @@
-
-
 class MarvelService {
 
     _apiBase = 'https://gateway.marvel.com:443/v1/public/';
@@ -16,7 +14,7 @@ class MarvelService {
     }
 
     getAllCharacters = async () => {
-       const res = this.getResource(`${this._apiBase}characters?limit=9&offset=210&${this._apikey}`); 
+       const res = await this.getResource(`${this._apiBase}characters?limit=9&offset=210&${this._apikey}`); 
        return res.data.results.map(this._transformCharacter);
     }
 
@@ -27,6 +25,7 @@ class MarvelService {
 
     _transformCharacter = (char) => {
         return {
+            id: char.id,
             name: char.name,
             description: char.description ? `${char.description.slice(0, 210)}...` : 'Данных о персонаже нет',
             thumbnail: char.thumbnail.path + '.' + char.thumbnail.extension,
