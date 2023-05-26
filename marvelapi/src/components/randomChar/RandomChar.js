@@ -10,7 +10,6 @@ const RandomChar = () => {
 
     const [char, setChar] = useState(null);
     
-
     const {loading, error, getCharacter} =  useMarvelService();
 
     useEffect(() => {
