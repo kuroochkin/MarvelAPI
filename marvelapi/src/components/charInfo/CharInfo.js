@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { ReactPropTypes } from 'react';
 
 import MarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
@@ -26,8 +27,6 @@ class CharInfo extends Component {
             this.updateChar();
         }
     }
-
-    
 
     updateChar = () => {
         const {charId} = this.props;
@@ -127,5 +126,6 @@ const View = ({char}) => {
         </>
     )
 }
+
 
 export default CharInfo;
