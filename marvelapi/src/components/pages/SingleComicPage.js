@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import useMarvelService from '../../services/MarvelService';
@@ -9,8 +9,6 @@ import './singleComicPage.scss';
 
 const SingleComicPage = () => {
 
-    const smth = useParams();
-    console.log(smth);
 
     const {comicId} = useParams();
     const [comic, setComic] = useState(null);
